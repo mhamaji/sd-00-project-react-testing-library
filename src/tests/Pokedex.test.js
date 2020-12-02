@@ -37,35 +37,35 @@ describe('testando arquivo Pokedex', () => {
     });
   });
 
-  /* it('testa se é mostrado só um pokemon por vez, usando data-testid', () => {
+  it('testa se é mostrado só um pokemon por vez, usando data-testid', () => {
     const { getAllByTestId } = renderWithRouter(
       <Pokedex pokemons={ pokemons } isPokemonFavoriteById={ {} } />,
     );
 
     const dataTestIdNome = getAllByTestId('pokemon-name');
     expect(dataTestIdNome.length).toBe(1);
-  }); */
-
-  it('testa se a pokedex tem os botões de filtro', () => {
-    const { getAllByTestId, getByTestId } = renderWithRouter(
-      <Pokedex pokemons={ pokemons } isPokemonFavoriteById={ {} } />,
-    );
-
-    // recuperando os botões que têm esse data-testid e verificando se são 7:
-    const testIdBotoes = getAllByTestId('pokemon-type-button');
-    const sete = 7;
-    expect(testIdBotoes.length).toBe(sete);
-
-    // recuperando id do elemento que guarda o tipo de cada pokemon:
-    const testIdTipoPokemon = getByTestId('pokemonType');
-
-    testIdBotoes.forEach((tipo) => {
-      fireEvent.click(tipo);
-      // verificando se o texto do tipo do pokemon é igual ao texto do botão
-      // que está dentro de tipo
-      expect(testIdTipoPokemon.textContent).toBe(tipo.textContent);
-    });
   });
+
+  // it('testa se a pokedex tem os botões de filtro', () => {
+  //   const { getAllByTestId, getByTestId } = renderWithRouter(
+  //     <Pokedex pokemons={ pokemons } isPokemonFavoriteById={ {} } />,
+  //   );
+
+  //   // recuperando os botões que têm esse data-testid e verificando se são 7:
+  //   const testIdBotoes = getAllByTestId('pokemon-type-button');
+  //   const sete = 7;
+  //   expect(testIdBotoes.length).toBe(sete);
+
+  //   // recuperando id do elemento que guarda o tipo de cada pokemon:
+  //   const testIdTipoPokemon = getByTestId('pokemonType');
+
+  //   testIdBotoes.forEach((tipo) => {
+  //     fireEvent.click(tipo);
+  //     // verificando se o texto do tipo do pokemon é igual ao texto do botão
+  //     // que está dentro de tipo
+  //     expect(testIdTipoPokemon.textContent).toBe(tipo.textContent);
+  //   });
+  // });
 
   it('testa o botão All reseta os filtros', () => {
     const { getByText } = renderWithRouter(
