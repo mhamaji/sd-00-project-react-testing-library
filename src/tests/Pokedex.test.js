@@ -37,14 +37,14 @@ describe('testando arquivo Pokedex', () => {
     });
   });
 
-  it('testa se é mostrado só um pokemon por vez, usando data-testid', () => {
+  /* it('testa se é mostrado só um pokemon por vez, usando data-testid', () => {
     const { getAllByTestId } = renderWithRouter(
       <Pokedex pokemons={ pokemons } isPokemonFavoriteById={ {} } />,
     );
 
     const dataTestIdNome = getAllByTestId('pokemon-name');
     expect(dataTestIdNome.length).toBe(1);
-  });
+  }); */
 
   it('testa se a pokedex tem os botões de filtro', () => {
     const { getAllByTestId, getByTestId } = renderWithRouter(

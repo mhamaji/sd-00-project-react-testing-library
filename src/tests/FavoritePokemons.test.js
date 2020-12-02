@@ -21,7 +21,7 @@ describe('testando aquivo FavoritePokémons', () => {
   });
 
   it('testa se são exibidos os cards de pokemons favoritos', () => {
-    const arrayFavoritos = [pokemons[1], pokemons[1], pokemons[2]];
+    const arrayFavoritos = [pokemons[0], pokemons[1], pokemons[2]];
     const { getByText } = renderWithRouter(
       <FavoritePokemons pokemons={ arrayFavoritos } />,
     );
