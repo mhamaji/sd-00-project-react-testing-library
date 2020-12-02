@@ -16,7 +16,7 @@ describe('testando aquivo FavoritePokémons', () => {
   it('testa se exibe mensagem de nenhum pokemon favorito encontrado', () => {
     const arrayVazio = [];
     const { getByText } = renderWithRouter(<FavoritePokemons pokemons={ arrayVazio } />);
-    const notFound = getByText(/No favorite pokemon found/);
+    const notFound = getByText(/No favorite pokemon found break/);
     expect(notFound).toBeInTheDocument();
   });
 
