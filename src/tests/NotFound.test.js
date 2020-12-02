@@ -16,7 +16,7 @@ describe('testes sobre componente NotFound', () => {
     const { getByRole } = renderWithRouter(<NotFound />);
 
     const titulo = getByRole('heading');
-    expect(titulo).toHaveTextContent(/Page requested not found 😭/)
+    expect(titulo).toHaveTextContent(/Page requested not found 😭/);
   });
 
   it('testa se existe uma imagem com a url desejada', () => {

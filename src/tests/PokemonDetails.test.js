@@ -124,6 +124,7 @@ describe('testando o arquivo PokemonDetails a partir de App', () => {
     });
   });
 });
+
 /* novamente o PR do Mariano me ajudou a estruturar este teste. A lógica de
 redirecionamento para a rota '/' no forEach é fantástica e não vi um outro modo
 de fazer se não como ele implementou.
